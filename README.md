@@ -41,7 +41,7 @@ Docker & Docker Compose – Lab setup and deployment
  Architecture
 
  
-            **  ┌───────────────┐
+              ┌───────────────┐
               │   SIEM/Logs   │
               │ (Splunk/ELK)  │
               └──────┬────────┘
@@ -51,12 +51,9 @@ Docker & Docker Compose – Lab setup and deployment
           │   Shuffle (SOAR)   │
           │  Orchestration Hub │
           └───────┬────────────┘
-                  │
-   ┌──────────────┼──────────────┐
-   ▼              ▼              ▼
 ┌───────┐   ┌───────────┐   ┌─────────────┐
-│Cortex │   │TheHive IR │   │ Firewall/EDR │
-│Analyzers│ │Ticket Mgmt│   │ Auto-block   │**
+ Cortex      TheHive IR      Firewall/EDR 
+Analyzers    Ticket Mgmt      Auto-block   
 └───────┘   └───────────┘   └─────────────┘
 
 
