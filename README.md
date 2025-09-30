@@ -1,7 +1,7 @@
 # SOC-Automation-with-SOAR-SOC-Automation-with-SOAR-
 This project shows how a SOC can automate repetitive tasks using SOAR tools. It implements workflows to check IP reputation, block malicious IPs, perform malware hash lookups, and create cases in TheHive—improving response speed and reducing human error in SOC operations.
 SOC Automation with SOAR (Shuffle + TheHive + Cortex)
-🔹 Overview
+ Overview
 
 This project demonstrates how a Security Operations Center (SOC) can automate security tasks using SOAR (Security Orchestration, Automation, and Response) tools.
 It integrates Shuffle, TheHive, and Cortex to automatically:
@@ -14,7 +14,7 @@ Generate incident tickets in TheHive
 
 Notify SOC analysts
 
-🔹 Features
+ Features
 
 Automated IP reputation checks via VirusTotal and AbuseIPDB
 
@@ -26,7 +26,7 @@ Email/Slack alerts to SOC team
 
 Easy to extend for additional analyzers and workflows
 
-🔹 Tools & Technologies
+Tools & Technologies
 
 Shuffle – SOAR orchestration platform
 
@@ -38,8 +38,10 @@ VirusTotal & AbuseIPDB APIs – Threat intelligence sources
 
 Docker & Docker Compose – Lab setup and deployment
 
-🔹 Architecture
-              ┌───────────────┐
+ Architecture
+
+ 
+            **  ┌───────────────┐
               │   SIEM/Logs   │
               │ (Splunk/ELK)  │
               └──────┬────────┘
@@ -54,10 +56,16 @@ Docker & Docker Compose – Lab setup and deployment
    ▼              ▼              ▼
 ┌───────┐   ┌───────────┐   ┌─────────────┐
 │Cortex │   │TheHive IR │   │ Firewall/EDR │
-│Analyzers│ │Ticket Mgmt│   │ Auto-block   │
+│Analyzers│ │Ticket Mgmt│   │ Auto-block   │**
 └───────┘   └───────────┘   └─────────────┘
 
-🔹 Setup Instructions
+
+
+
+
+
+
+** Setup Instructions**
 
 Install Docker & Docker Compose
 
@@ -76,8 +84,8 @@ Configure Cortex analyzers with API keys (VirusTotal, AbuseIPDB).
 Import workflow JSON in Shuffle.
 
 Run workflow with a test IP or malware hash.
-
-🔹 Demo
+**
+ Demo**
 
 Input suspicious IP in Shuffle workflow.
 
@@ -88,8 +96,8 @@ Workflow blocks IP automatically (Firewall/EDR).
 Incident ticket created in TheHive.
 
 Email/Slack alert sent to SOC team.
-
-🔹 Contribution
+**
+ Contribution**
 
 Fork the repo to add new analyzers or workflows
 
